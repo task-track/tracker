@@ -18,11 +18,9 @@ export class AppController {
     return this.appService.getHello();
   }
 
-
   @Get('healthcheck')
   async healthcheck() {
     const now = Date.now();
-
     return {
       status: 'API online',
       uptime: Number((now - this.start) / 1000).toFixed(0),

@@ -7,9 +7,7 @@ import { AppService } from './app.service';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      //envFilePath: '.env'
       envFilePath: path.resolve(__dirname, '../../../.env'),
-
     })
   ],
   controllers: [AppController],
